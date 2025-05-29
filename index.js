@@ -7,7 +7,7 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(cors({
-    origin:"*"
+    origin:"*",
 }))
 
 //Middleware to parse JSON 
@@ -15,6 +15,6 @@ app.use(express.json());
 
 //Routes
 const bookingFormRoutes = require('./routes/bookingform');
-app.use('/', bookingFormRoutes);
+app.use('/api/booking', bookingFormRoutes);
 
 module.exports=app;
