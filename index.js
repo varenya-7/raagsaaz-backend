@@ -15,6 +15,8 @@ app.use(express.json());
 
 //Routes
 const bookingFormRoutes = require('./routes/bookingform');
+const bandMemberRoutes = require('./routes/bandmember');
 app.use('/api/booking', bookingFormRoutes);
+app.use('/api/bandmembers',bandMemberRoutes);
 
 module.exports=app;
