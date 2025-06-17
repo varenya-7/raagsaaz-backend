@@ -18,5 +18,8 @@ const bookingFormRoutes = require('./routes/bookingform');
 const bandMemberRoutes = require('./routes/bandmember');
 app.use('/api/booking', bookingFormRoutes);
 app.use('/api/bandmembers',bandMemberRoutes);
+app.get('/', (req, res) => {
+  res.send('Raagsaaz backend server is Live!');
+});
 
 module.exports=app;
